@@ -20,7 +20,7 @@ from sklearn.metrics import (
 from torch.utils.data import DataLoader, Dataset
 from torchvision import transforms
 
-PATCH_SIZE = 80
+PATCH_SIZE = 640
 _DEFAULT_TRANSFORM = transforms.Compose(
     [
         transforms.Resize((PATCH_SIZE, PATCH_SIZE)),

@@ -32,8 +32,9 @@ class CNNBaseline(nn.Module):
             nn.Dropout2d(0.25),
         )
         self.classifier = nn.Sequential(
+            nn.AdaptiveAvgPool2d((1, 1)),
             nn.Flatten(),
-            nn.Linear(128 * 10 * 10, 128),
+            nn.Linear(128, 128),
             nn.ReLU(inplace=True),
             nn.Dropout(0.5),
             nn.Linear(128, 1),
